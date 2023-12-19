@@ -261,6 +261,8 @@ function radar_visualization(config) {
     if (ring % 2 === 1) {
       dy = dy + 36 + segmented[quadrant][ring-1].length * 12;
     }
+    if (quadrant == 2 && ring == 3) { dx += 60;
+    }
     return translate(
       legend_offset[quadrant].x + dx,
       legend_offset[quadrant].y + dy
